@@ -18,15 +18,16 @@ class _TickethomeState extends State<Tickethome> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(15),
-                      height: 27,
-                      width: 27,
-                      child: Image.asset("assets/homepage/menu.png"),
-                    ),
-                  ],
+                Container(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/homepage/menu.png",
+                        height: 25,
+                      )
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),
@@ -305,8 +306,9 @@ class _TickethomeState extends State<Tickethome> {
     );
   }
 
-  myTicketsWidget() => SizedBox(
-        height: 65,
+  myTicketsWidget() => Container(
+        height: 75,
+        padding: EdgeInsets.only(bottom: 5),
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
@@ -323,7 +325,7 @@ class _TickethomeState extends State<Tickethome> {
                   ),
                 ],
               ),
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -379,7 +381,7 @@ class _TickethomeState extends State<Tickethome> {
                   ),
                 ],
               ),
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
