@@ -31,11 +31,16 @@ class _TicketlistState extends State<Ticketlist> {
               children: [
                 Row(
                   children: [
-                    Container(
-                      margin: EdgeInsets.all(20),
-                      child: Image.asset(
-                        "assets/homepage/back.png",
-                        height: 20,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(20),
+                        child: Image.asset(
+                          "assets/homepage/back.png",
+                          height: 20,
+                        ),
                       ),
                     ),
                     Expanded(

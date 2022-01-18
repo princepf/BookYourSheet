@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'ticket_list.dart';
+
 class Tickethome extends StatefulWidget {
   Tickethome({Key? key}) : super(key: key);
 
@@ -253,12 +255,20 @@ class _TickethomeState extends State<Tickethome> {
                               ),
                             ),
                             Expanded(
-                              child: Container(
-                                alignment: Alignment.center,
-                                child: Image.asset(
-                                  "assets/homepage/ft.png",
-                                  height: 70,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Ticketlist()));
+                                },
+                                child: Container(
                                   alignment: Alignment.center,
+                                  child: Image.asset(
+                                    "assets/homepage/ft.png",
+                                    height: 70,
+                                    alignment: Alignment.center,
+                                  ),
                                 ),
                               ),
                             )
